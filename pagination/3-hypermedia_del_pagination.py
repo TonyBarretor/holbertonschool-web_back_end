@@ -51,14 +51,18 @@ class Server:
         Returns:
             Dict: Dictionary containing information about the dataset page.
         """
-        assert index is None or 0 <= index < len(self.dataset()), "Index out of range"
-        assert isinstance(page_size, int) and page_size > 0, "Page size must be a positive integer"
+        assert index is None or 0 <= index < len(self.dataset()), "outof range"
+        assert isinstance(page_size, int) and page_size > 0, "be positive"
 
         start_index = 0 if index is None else index
         end_index = start_index + page_size
 
         dataset = self.dataset()
-        data = [dataset[i] for i in range(start_index, min(end_index, len(dataset)))]
+        data = [
+            dataset[i] for i in range(
+                start_index, min(end_index, len(dataset))
+            )
+        ]
 
         next_index = end_index if end_index < len(dataset) else None
 

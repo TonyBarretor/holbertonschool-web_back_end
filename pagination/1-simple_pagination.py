@@ -7,7 +7,7 @@ Module with a simple helper function
 
 import csv
 import math
-from typing import List,Tuple
+from typing import List, Tuple
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
@@ -26,6 +26,7 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
     start_index = (page - 1) * page_size
     end_index = page * page_size
     return start_index, end_index
+
 
 class Server:
     """Server class to paginate a database of popular baby names.
@@ -50,14 +51,14 @@ class Server:
         """Return the appropriate page of the dataset.
 
         Args:
-            page (int): Current page number (default is 1).
-            page_size (int): Number of items per page (default is 10).
+            page (int): Current page num (default is 1).
+            page_size (int): items per page (default is 10).
 
         Returns:
             List[List]: Paginated data.
         """
-        assert isinstance(page, int) and page > 0, "Page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0, "Page size must be a positive integer"
+        assert isinstance(page, int) and page > 0, "be a pos int"
+        assert isinstance(page_size, int) and page_size > 0, "be a pos int"
 
         start_index, end_index = index_range(page, page_size)
         dataset = self.dataset()

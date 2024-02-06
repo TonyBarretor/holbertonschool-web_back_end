@@ -55,8 +55,8 @@ class Server:
         Returns:
             List[List]: Paginated data.
         """
-        assert isinstance(page, int) and page > 0, "Page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0, "Page size must be a positive integer"
+        assert isinstance(page, int) and page > 0, "Page must be a pos int"
+        assert isinstance(page_size, int) and page_size > 0, "be a pos int"
 
         start_index, end_index = index_range(page, page_size)
         dataset = self.dataset()
@@ -72,8 +72,9 @@ class Server:
         Returns:
             dict: Dictionary containing information about the dataset page.
         """
-        assert isinstance(page, int) and page > 0, "Page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0, "Page size must be a positive integer"
+
+        assert isinstance(page, int) and page > 0, "Page must be a pos intr"
+        assert isinstance(page_size, int) and page_size > 0, " be a pos int"
 
         data = self.get_page(page, page_size)
         total_pages = math.ceil(len(self.dataset()) / page_size)
@@ -82,8 +83,8 @@ class Server:
             'page_size': len(data),
             'page': page,
             'data': data,
-            'next_page': page + 1 if page * page_size < len(self.dataset()) else None,
+            'next_page':
+            page + 1 if page * page_size < len(self.dataset()) else None,
             'prev_page': page - 1 if page > 1 else None,
             'total_pages': total_pages
         }
-
