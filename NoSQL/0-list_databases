@@ -1,4 +1,2 @@
-// list databases
-db.adminCommand('listDatabases').databases.forEach(database => {
-    print(`${database.name}\t${(database.sizeOnDisk / 1024 / 1024 / 1024).toFixed(3)}GB`);
-});
+// Lists all databases in MongoDB.
+show dbs
