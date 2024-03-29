@@ -6,6 +6,7 @@ n times with the specified max_delay.
 import asyncio
 from typing import List
 
+
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
