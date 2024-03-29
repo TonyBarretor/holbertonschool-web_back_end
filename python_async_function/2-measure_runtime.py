@@ -3,6 +3,7 @@
 Module to measure the runtime of wait_n function.
 """
 import time
+import asyncio
 from typing import Callable
 
 
