@@ -1,5 +1,5 @@
 export default async function loadBalancer(chinaDownload, USDownload) {
-    return Promise.race([chinaDownload, USDownload]).then(
-      (firstResolved) => firstResolved,
-    );
-  }
+  return Promise.race([chinaDownload, USDownload]).then(
+    (firstResolved) => firstResolved,
+  );
+}
