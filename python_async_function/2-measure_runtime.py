@@ -8,7 +8,8 @@ from typing import Callable
 
 def measure_time(n: int, max_delay: int) -> float:
     """
-    Measure the total execution time for wait_n(n, max_delay),
+    Measure the total execution time
+    for wait_n(n, max_delay),
     and return total_time / n.
 
     Args:

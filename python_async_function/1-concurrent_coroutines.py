@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Asynchronous coroutine that spawns wait_random n times with the specified max_delay.
+Asynchronous coroutine that spawns wait_random
+n times with the specified max_delay.
 """
 import asyncio
 from typing import List
@@ -17,7 +18,8 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         max_delay (int): The maximum delay allowed.
 
     Returns:
-        List[float]: List of all the delays (float values) in ascending order.
+        List[float]: List of all the delays
+        (float values) in ascending order.
     """
     delays = []
     for _ in range(n):
