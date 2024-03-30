@@ -1,5 +1,3 @@
-// 100-weak.js
-
 // Export a const instance of WeakMap and name it weakMap
 export const weakMap = new WeakMap();
 
